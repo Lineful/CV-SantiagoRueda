@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    background-color: gray;
+    min-height: 100%;
+}
+#actualizar{
+    text-align: center;
+    margin-top: 5%;
+    margin: 7%;
+}
+#borrar{
+    text-align: center;
+    margin-top: 5%;
+    margin: 7%;
+}
+.header{
+    text-align: center;
+    grid-area: header;
+    background: rgb(2,0,36);
+    background-color:  rgba(0,212,255,1);
+    border-radius: 10px;
+    margin-top: 0%;
+    height: 50px;
+}
+.header li{
+    list-style-type: none;
+    display: inline-grid;
+    margin-top: 1%;
+    margin-right: 1%;
+    background-color: gray;
+    width: 15%; 
+    border-radius: 18px;
+}
+header li a{
+    color: white;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+#subseccion1, #subseccion2, #subseccion3{
+    top: 100%;
+    left: 0px;
+    background-color: gray;
+    display: none;
+    font: nromal 0.8em arial;
+    padding: 0.2em 0.5em;
+    width: 90%;
+    border-radius: 7px;
+    z-index: 1;
+    color: white;
+}
+#contenedor{
+    background: rgb(2,0,36);
+    background-color:  rgba(0,212,255,1);
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 3%;
+    border-radius: 8%;
+    text-align: center;
+}
+#contenedor #tabla{
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#registros{
+    margin-top: 5%;
+    margin-left: 3%;
+    text-align: center;
+}
+#cajasdetexto{
+    text-align: center;
+    margin-top: 16%;
+}
+.navbar{
+    grid-area: navbar;
+    background-color: red;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: red;
+}
+.main{
+    grid-area: main;
+    background-color: green;
+    text-align: center;
+}
+.footer{
+    grid-area: footer;
+    background-color: blue;
+}
+.grid-container > * {
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+    "header" 80px
+    "navbar" 50px
+    "main" auto
+    "sidebar" 50px
+    "footer" 50px;
+}
+@media (min-width: 900px) {
+        .grid-container{
+        grid-template:
+        "header header header" 80px
+        "navbar main sidebar" auto
+        "footer footer footer" 100px /
+        200px auto 200px;
+    }
+}
